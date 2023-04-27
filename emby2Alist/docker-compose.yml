@@ -23,17 +23,3 @@ services:
       volumes:
         - ./alist:/opt/alist/data
       restart: always
-
-    service.ali-webdav:
-      image: messense/aliyundrive-webdav
-      container_name: ali-webdav
-      ports:
-        - 8080:8080
-      volumes:
-        - ./aliyundrive-webdav/:/etc/aliyundrive-webdav/
-      environment:
-        - REFRESH_TOKEN=1111111111111aaaaaaaaaa
-        - WEBDAV_AUTH_USER=admin
-        - WEBDAV_AUTH_PASSWORD=admin
-      restart: always
-
